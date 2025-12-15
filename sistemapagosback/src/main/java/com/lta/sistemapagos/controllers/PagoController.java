@@ -56,7 +56,7 @@ public class PagoController {
 
     @GetMapping("/estudiantes/{codigo}/pagos")
     public List<Pago> listarPagosPorCodigoEstudiante(@PathVariable String codigo) {
-        return pagoRepository.findByCodigoEstudiante(codigo);
+        return pagoRepository.findByEstudianteCodigo(codigo);
     }
 
     @GetMapping("/pagosPorStatus")
