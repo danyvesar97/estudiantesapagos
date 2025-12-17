@@ -9,9 +9,24 @@
     Importar
     <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
   </button>
+  <mat-menu #importMenu="matMenu">
+    <button mat-menu-item>Cargar estudiantes</button>
+    <button mat-menu-item>Cargar pagos</button>
+  </mat-menu>
   <button mat-raised-button color="accent">Salir</button>
 </mat-toolbar>
-<mat-menu #importMenu="matMenu">
-  <button mat-menu-item>Cargar estudiantes</button>
-  <button mat-menu-item>Cargar pagos</button>
-</mat-menu>
+<mat-drawer-container>
+  <mat-drawer opened="true" mode="side" position="start">
+    <mat-list>
+      <mat-list-item>
+        <button mat-button>Estudiantes</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button>Pagos</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="min-height: 600px"></div>
+  </mat-drawer-content>
+</mat-drawer-container>
