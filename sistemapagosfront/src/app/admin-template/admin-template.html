@@ -2,31 +2,45 @@
   <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <span style="flex: 1 1 auto"></span>
-  <button mat-button>Home</button>
-  <button mat-button>Perfil</button>
+  <span style="flex: auto"></span>
+  <button mat-button routerLink="/home">Home</button>
+  <button mat-button routerLink="/profile">Perfil</button>
   <button mat-button [matMenuTriggerFor]="importMenu">
     Importar
     <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
   </button>
   <mat-menu #importMenu="matMenu">
-    <button mat-menu-item>Cargar estudiantes</button>
-    <button mat-menu-item>Cargar pagos</button>
+    <button mat-menu-item routerLink="/loadEstudiantes">Cargar estudiantes</button>
+    <button mat-menu-item routerLink="/loadPagos">Cargar pagos</button>
   </mat-menu>
-  <button mat-raised-button color="accent">Salir</button>
+  <button mat-raised-button color="accent" routerLink="/login">Salir</button>
 </mat-toolbar>
 <mat-drawer-container>
   <mat-drawer opened="true" mode="side" position="start">
     <mat-list>
       <mat-list-item>
-        <button mat-button>Estudiantes</button>
+        <button mat-button routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          Dashboard
+        </button>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button>Pagos</button>
+        <button mat-button routerLink="/estudiantes">
+          <mat-icon>dashboard</mat-icon>
+          Estudiantes
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/pagos">
+          <mat-icon>dashboard</mat-icon>
+          Pagos
+        </button>
       </mat-list-item>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-    <div style="min-height: 600px"></div>
+    <div style="min-height: 600px">
+      <router-outlet></router-outlet>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>
