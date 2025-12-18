@@ -11,6 +11,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import {Home} from './home/home';
 import {Profile} from './profile/profile';
 import {LoadEstudiantes} from './load-estudiantes/load-estudiantes';
@@ -19,6 +21,7 @@ import {Login} from './login/login';
 import {Pagos} from './pagos/pagos';
 import {Estudiantes} from './estudiantes/estudiantes';
 import {Dashboard} from './dashboard/dashboard';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import {Dashboard} from './dashboard/dashboard';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
