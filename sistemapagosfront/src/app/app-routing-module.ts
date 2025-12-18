@@ -13,13 +13,17 @@ import {Profile} from './profile/profile';
 const routes: Routes = [
   {path: "", component: Login},
   {path: "home", component: Home},
-  {path: "profile", component: Profile},
   {path: "login", component: Login},
-  {path: "loadEstudiantes", component: LoadEstudiantes},
-  {path: "loadPagos", component: LoadPagos},
-  {path: "dashboard", component: Dashboard},
-  {path: "estudiantes", component: Estudiantes},
-  {path: "pagos", component: Pagos},
+  {
+    path: "admin", component: AdminTemplate, children: [
+      {path: "profile", component: Profile},
+      {path: "loadEstudiantes", component: LoadEstudiantes},
+      {path: "loadPagos", component: LoadPagos},
+      {path: "dashboard", component: Dashboard},
+      {path: "estudiantes", component: Estudiantes},
+      {path: "pagos", component: Pagos}
+    ]
+  },
 ];
 
 @NgModule({
