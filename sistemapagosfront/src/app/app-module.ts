@@ -23,6 +23,7 @@ import { Estudiantes } from './estudiantes/estudiantes';
 import { Dashboard } from './dashboard/dashboard';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './guards/auth-guard';
+import { AuthorizationGuard } from './guards/authorization-guard';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AuthGuard } from './guards/auth-guard';
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay()),
     AuthGuard,
+    AuthorizationGuard
   ],
   bootstrap: [App],
 })
