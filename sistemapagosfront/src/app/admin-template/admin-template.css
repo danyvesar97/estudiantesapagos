@@ -1,0 +1,7 @@
+.toolbar-spacer {
+  flex: auto;
+}
+
+.drawer-content {
+  min-height: 600px;
+}
