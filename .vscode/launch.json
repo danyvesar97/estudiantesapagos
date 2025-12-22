@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SistemapagosbackApplication<sistemapagosback>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.lta.sistemapagos.SistemapagosbackApplication",
+            "projectName": "sistemapagosback",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

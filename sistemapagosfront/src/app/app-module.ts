@@ -24,6 +24,10 @@ import { Dashboard } from './dashboard/dashboard';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './guards/auth-guard';
 import { AuthorizationGuard } from './guards/authorization-guard';
+import { MatTableModule } from '@angular/material/table';
+import { provideHttpClient } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -51,10 +55,14 @@ import { AuthorizationGuard } from './guards/authorization-guard';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay()),
+    provideHttpClient(),
     AuthGuard,
     AuthorizationGuard
   ],

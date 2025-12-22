@@ -1,5 +1,6 @@
 package com.lta.sistemapagos.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.lta.sistemapagos.enums.PagoStatus;
 import com.lta.sistemapagos.enums.TypePago;
 import jakarta.persistence.*;
@@ -32,4 +33,9 @@ public class Pago {
 
     @ManyToOne
     private Estudiante estudiante;
+
+    @JsonProperty("nombre")
+    public String getNombreEstudiante() {
+        return estudiante != null ? estudiante.getNombre() + " " + estudiante.getApellido() : null;
+    }
 }
